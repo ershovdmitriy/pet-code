@@ -7,6 +7,7 @@ h2db/
 mvnw
 mvnw.cmd
 .mvn
+.info
 
 ### STS ###
 .apt_generated
