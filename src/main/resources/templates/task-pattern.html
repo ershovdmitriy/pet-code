@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Задача: [[${task.title}]]</title>
+</head>
+<body>
+<h1 th:text="${task.title}">Заголовок</h1>
+<p th:text="${task.description}">Описание</p>
+
+<div>
+    <h2>Отправить решение</h2>
+    <form th:action="@{/tasks/{id}/solve(id=${task.id})}" method="post">
+        <textarea name="code" rows="10" cols="50" placeholder="Заглушка для будущей отправки решения"></textarea><br/>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<a href="/">Назад к списку</a>
+</body>
+</html>
