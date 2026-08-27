@@ -3,8 +3,6 @@ package org.example.petcode.mapper;
 import org.example.petcode.dto.response.TaskResponse;
 import org.example.petcode.entity.Task;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
 
 import java.util.List;
 

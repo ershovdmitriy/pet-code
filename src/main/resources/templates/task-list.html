@@ -10,5 +10,8 @@
         <a th:href="@{/tasks/{id}(id=${task.id})}" th:text="${task.title}"></a>
     </li>
 </ul>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Выйти</button>
+</form>
 </body>
 </html>
