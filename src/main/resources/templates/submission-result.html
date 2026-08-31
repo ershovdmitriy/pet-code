@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат отправки</title>
+</head>
+<body>
+<h1>Результат отправки</h1>
+<div class="details">
+    <p><strong>Задача:</strong> <span th:text="${submission.task.title}"></span></p>
+    <p><strong>Время выполнения:</strong> <span th:text="${submission.executionTimeMs} + ' мс'"></span></p>
+    <p><strong>Отправлено:</strong> <span th:text="${#temporals.format(submission.executedAt, 'dd.MM.yyyy HH:mm')}"></span></p>
+    <p><strong>Результат:</strong> <span th:text="${submission.result}"></span></p>
+    <h3>Ваш код:</h3>
+    <pre class="code-block" th:text="${submission.code}"></pre>
+</div>
+<a th:href="@{/tasks/{id}(id=${submission.task.id})}">Вернуться к задаче</a> |
+<a href="/tasks">К списку задач</a>
+</body>
+</html>
